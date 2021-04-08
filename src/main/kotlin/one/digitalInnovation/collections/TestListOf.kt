@@ -1,11 +1,12 @@
 package one.digitalInnovation.collections
 
 fun main() {
-    val Joaquim = Employee( "Joaquim", 1650.00)
-    val Raquel = Employee( "Raquel", 1400.00)
-    val Raul = Employee( "Raul", 1100.00)
+    val Joaquim = Employee( "Joaquim", 1650.00, "CLT")
+    val Raquel = Employee( "Raquel", 1400.00, "PJ")
+    val Raul = Employee( "Raul", 1100.00, "CLT")
+    val Luisa = Employee( "Luisa", 1970.00, "PJ")
 
-    val employees = listOf(Joaquim, Raquel, Raul)
+    val employees = listOf(Joaquim, Raquel, Raul,Luisa)
 
     employees.forEach{println(it)}
     println("#################")
@@ -18,10 +19,20 @@ fun main() {
     employees
         .sortedBy { it.salary }
         .forEach{ println(it)}
+    println("#################")
+
+    employees
+        .groupBy { it.category }
+        .forEach{println(it)}
+    println("#################")
+
+
+
 }
 data class Employee(
     val name: String,
-    val salary: Double
+    val salary: Double,
+    val category: String
 ){
     override fun toString(): String =
         """
