@@ -9,7 +9,15 @@ fun main() {
 
     employees.forEach{println(it)}
     println("#################")
+
+    //find a position by name
     println(employees.find { it.name == "Raquel" })
+    println("#################")
+
+    //organize list by ascending order
+    employees
+        .sortedBy { it.salary }
+        .forEach{ println(it)}
 }
 data class Employee(
     val name: String,
@@ -19,6 +27,6 @@ data class Employee(
         """
             Name:   $name
             Salary: $salary
-            ***************
+            
         """.trimIndent()
 }
