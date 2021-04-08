@@ -7,8 +7,8 @@ fun main(){
         println(salary)
     }
     println("*************************************")
-    println("Highest salary:  ${salaries.max()}")
-    println("Lowest salary:  ${salaries.min()}")
+    println("Highest salary:  ${salaries.maxOrNull()}")
+    println("Lowest salary:  ${salaries.minOrNull()}")
     println("Average salary:  ${salaries.average()}")
     println("*************************************")
     val highSalaryThan250 = salaries.filter { it > 600 }
