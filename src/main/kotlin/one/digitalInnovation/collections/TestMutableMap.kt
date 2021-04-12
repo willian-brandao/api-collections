@@ -23,6 +23,7 @@ fun main(){
     println("===============================")
     repository.remove(joaquim.name)
     repository.findAll().forEach { println(it) }
+    println("===============================")
 
 
 }
